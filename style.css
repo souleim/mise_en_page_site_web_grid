@@ -1,0 +1,42 @@
+#conteneur {
+  color: rgb(247, 244, 233);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 7fr 1.5fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    'header header'
+    'article aside'
+    'footer footer';
+}
+
+header {
+  background-color: rgb(20, 128, 128);
+  grid-area: header;
+}
+article {
+  background-color: rgb(182, 142, 91);
+  grid-area: article;
+}
+aside {
+  background-color: rgb(71, 126, 15);
+  grid-area: aside;
+}
+footer {
+  background-color: rgb(206, 64, 12);
+  grid-area: footer;
+}
+
+@media screen and (max-width: 820px) {
+  #conteneur {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr 3fr 1.5fr;
+    grid-gap: 10px;
+    grid-template-areas:
+      'header'
+      'article'
+      'aside'
+      'footer';
+  }
+}
